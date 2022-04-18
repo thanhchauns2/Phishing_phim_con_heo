@@ -25,8 +25,11 @@ SECRET_KEY = 'django-insecure-_+-mwlu76v_cernx@o0m#_qs!bvbdchf4h9kzd+34-m!smmqk&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', 'https://c53dba39-90d5-48c5-bcab-84df0166cfeb.id.repl.co', 'https://Phishingphimconheo.thanhchauns2.repl.co']
 
+X_FRAME_OPTIONS = '*'
+
+CSRF_TRUSTED_ORIGINS = ['https://*.id.repl.co','https://*.127.0.0.1']
 
 # Application definition
 
@@ -38,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
+    # 'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -48,7 +52,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
 ]
+
+# CORS_ORIGIN_ALLOW_ALL = True
+
+# CORS_ORIGIN_WHITELIST = (
+#   'http://localhost:8000',
+# )
 
 ROOT_URLCONF = 'phim_heo.urls'
 

