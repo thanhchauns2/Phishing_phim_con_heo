@@ -19,12 +19,12 @@ def index(request):
             t = User(name=n, password=p)
             t.save()
 			
-            return HttpResponseRedirect("/download/" %t.id)
+            return HttpResponseRedirect("/download/")
 
     else:
         form = CreateListForm()
         print('a')
-    return render(request, 'main/download.html', {"form": form})
+    return render(request, 'main/index.html', {"form": form})
 
 def home(response):
     return HttpResponse("<h1>Hello, world. You're at the home page.</h1>")
