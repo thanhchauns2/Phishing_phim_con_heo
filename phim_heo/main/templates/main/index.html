@@ -1,35 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tải phim con heo mới nhất!</title>
-    <style>
-        body {
-            background-image: url('https://mamnonhoami.edu.vn/wp-content/uploads/2021/06/con-heo-con.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-    </style>
-</head>
-<body>
-    <h1>Tải phim con heo mới nhất tại đây!</h1>
-    <p>Hàng ngàn phim con heo được upload mỗi ngày</p>
-    <div>
-        <h2>Đăng nhập để tải ngay!</h2>
-        <form action="" method="POST">
-            {% csrf_token %}
-            Tài khoản facebook:<br>
-            {{form.name}}<br>
-            Mật khẩu:<br>
-<!--             <input type="text" name="password"> -->
-            {% csrf_token %}
-            {{form.password}}
-            <br>
-            <input type="submit" value="Tải ngay!">
-        </form>
-    </div>
-</body>
+<html>
+	<head>
+		<title>Welcome to PiggyHub</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+			body{
+				background-image: url("img/background.jpg");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				font-size: 18px;
+			}
+			.brand div{
+    			padding: 20%;
+    			width: 1000px;
+			}
+			.brand div h1{
+				color: white;
+				font-size: 72px;
+			}
+			.brand div h1 span{
+				background-color: rgb(255, 160, 27);
+				color: black;
+				padding-left: 10px;
+				padding-right: 10px;
+				border-radius: 15px;
+			}
+			.brand div p{
+				color:rgba(255,255,255,0.3);
+				font-style: italic;
+				padding-left: 10px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+			.brand div a{
+				padding-left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="brand">
+			<div>
+				<h1><strong><span>PIGGY</span>HUB</strong></h1>
+				<p>Kho phim heo miễn phí dành cho bạn, hàng ngàn clip mới được đăng tải mỗi ngày</p>
+				<a href="login.html" class="btn btn-danger">Khám phá</a>
+			</div>
+		</div>
+	</body>
 </html>
+		
